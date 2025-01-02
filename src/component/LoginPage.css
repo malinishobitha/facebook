@@ -1,0 +1,105 @@
+/* Overall page background */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Centered login form */
+   div {
+    width: 350px;
+    padding: 15px; 
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  } 
+  
+  /* Facebook logo area */
+  h2 {
+    text-align: center;
+    color: #1877f2;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Form inputs */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Password container to allow positioning of the eye icon */
+  .password-container {
+    position: relative;
+  }
+  
+  /* Styling the eye icon */
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Login button styling (Facebook blue) */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #166fe5;
+  }
+  
+  /* Sign-up link styling */
+  p {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  a {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer text styling */
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    font-size: 12px;
+  }
+  
+  /* Facebook "forgot password" text styling */
+  .forgot-password {
+    text-align: right;
+    font-size: 12px;
+  }
+  
+  .forgot-password a {
+    color: #1877f2;
+  } 
+   
