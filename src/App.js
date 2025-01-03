@@ -1,15 +1,22 @@
 import React from 'react';
-import './App.css';
-import Login from './component/LoginPage';
-import SignupPage from './component/SignupPage';
-function App() {
-  return (
-    <div className="App">
-   <Login/>
-   <SignupPage/>
+import { Routes, Route } from 'react-router-dom'; // Don't import BrowserRouter here
+import Feed from './component/Feed';  
+import Auth from './component/Auth';  
+import SignUp from './component/SignupPage';
 
-    </div>
+const App = () => {
+  const [isSignUp, setIsSignUp] = React.useState(false);
+
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={isSignUp ? <SignUp setIsSignUp={setIsSignUp} /> : <Auth setIsSignUp={setIsSignUp} />}
+      />
+      <Route path="/feed" element={<Feed />} />
+      <Route path="/posts" element={<Feed />} />
+    </Routes>
   );
-}
+};
 
 export default App;

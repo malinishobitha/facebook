@@ -1,0 +1,86 @@
+/* Auth component container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  /* Auth box styling */
+  .auth-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  /* Facebook Logo */
+  .facebook-logo {
+    width: 50px;  /* Size of the logo */
+    margin-bottom: 20px;
+  }
+  
+  /* Heading styling */
+  .auth-box h2 {
+    font-family: 'Arial', sans-serif;
+    color: #1877f2;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Input fields */
+  .auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Button styling */
+  .auth-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-box button:hover {
+    background-color: #165e9b;
+  }
+  
+  /* Forgot password text */
+  .auth-box p {
+    font-size: 14px;
+    color: #1877f2;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Sign-up link section */
+  .signup-link {
+    margin-top: 20px;
+  }
+  
+  .signup-link p {
+    font-size: 14px;
+    color: #606770;
+  }
+  
+  .signup-link button {
+    background-color: transparent;
+    border: none;
+    color: #1877f2;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
