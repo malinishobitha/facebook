@@ -57,13 +57,12 @@ const Auth = ({ setIsSignUp }) => {
         />
         <button onClick={handleLogin}>Log In</button>
         
-        {/* Show error message if login fails */}
+        
         {errorMessage && <p className="error-message">{errorMessage}</p>}
 
         <p>Forgotten password?</p>
         <div className="signup-link">
           <p>Don't have an account?</p>
-          {/* Clicking this will show the SignUp page */}
           <button onClick={() => setIsSignUp(true)}>Sign Up</button>
         </div>
       </div>

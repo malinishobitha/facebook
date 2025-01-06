@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'; // Don't import BrowserRouter 
 import Feed from './component/Feed';  
 import Auth from './component/Auth';  
 import SignUp from './component/SignupPage';
+import Profile from "./component/Profile";
 
 const App = () => {
   const [isSignUp, setIsSignUp] = React.useState(false);
@@ -15,6 +16,8 @@ const App = () => {
       />
       <Route path="/feed" element={<Feed />} />
       <Route path="/posts" element={<Feed />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/Auth" element={<Auth/>} />
     </Routes>
   );
 };

@@ -9,26 +9,37 @@ const SignUp = ({ setIsSignUp }) => {
   const dispatch = useDispatch();
 
   const handleSignUp = () => {
-    // Create a new user object with the correct state variables
+   
+    if (!email.trim() || !password.trim() || !name.trim()) {
+      alert('Please fill in all fields!');
+      return;  
+    }
+  
     const newUser = {
-      email: email.trim(),  
-      password: password.trim(),  
-      name: name.trim(),  
+      email: email.trim(),
+      password: password.trim(),
+      name: name.trim(), 
     };
-
-    // Log to check the user data
-    console.log('Saving user:', newUser);
-
-    // Save the new user to localStorage
-    localStorage.setItem('user', JSON.stringify(newUser));  
-
+  
+   
+    localStorage.setItem('user', JSON.stringify(newUser));
+  
     alert('Sign up successful!');
-    setIsSignUp(false);  // Optionally redirect to login page after signup
+    setIsSignUp(false); 
   };
+  
+  
 
   return (
     <div className="signup-container">
       <div className="signup-box">
+    
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt="Facebook Logo"
+          className="facebook-logo"
+        />
+        <h2>Facebook</h2>
         <h2>Sign Up</h2>
         <input
           type="text"

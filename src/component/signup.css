@@ -14,7 +14,7 @@
   }
   
   .signup-box input {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -24,7 +24,7 @@
   .signup-box button {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
+    background-color: purple;
     color: white;
     border: none;
     border-radius: 5px;
@@ -38,7 +38,7 @@
   .login-link button {
     background: none;
     border: none;
-    color: #007bff;
+    color: purple;
     cursor: pointer;
   }
   
