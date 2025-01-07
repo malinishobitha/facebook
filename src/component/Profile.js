@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import "./Profile.css";
+import "./css/Profile.css";
 
 const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -10,7 +10,6 @@ const Profile = () => {
     bio: "",
   });
 
-  // Load user data from localStorage
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
@@ -18,7 +17,6 @@ const Profile = () => {
     }
   }, []);
 
-  // Get posts from localStorage or Redux
   const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
   const userPosts = storedPosts.filter((post) => post.userName === userData.name);
 
@@ -37,7 +35,7 @@ const Profile = () => {
       <button onClick={() => (window.location.href = "/profile")}>Profile</button>
       <button onClick={() => {
         localStorage.removeItem("user"); 
-        window.location.href = "/SignupPage"; 
+        window.location.href = "/SignUp"; 
       }}>Logout</button>
     </div>
   </nav>

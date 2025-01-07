@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import './signup.css';
+import './css/signup.css';
 
 const SignUp = ({ setIsSignUp }) => {
   const [email, setEmail] = useState('');
@@ -9,31 +9,30 @@ const SignUp = ({ setIsSignUp }) => {
   const dispatch = useDispatch();
 
   const handleSignUp = () => {
-   
     if (!email.trim() || !password.trim() || !name.trim()) {
       alert('Please fill in all fields!');
-      return;  
+      return;
     }
-  
+
     const newUser = {
       email: email.trim(),
       password: password.trim(),
-      name: name.trim(), 
+      name: name.trim(),
     };
-  
-   
     localStorage.setItem('user', JSON.stringify(newUser));
-  
+
     alert('Sign up successful!');
-    setIsSignUp(false); 
+
+    if (typeof setIsSignUp === 'function') {
+      setIsSignUp(false); 
+    } else {
+      console.error('setIsSignUp is not defined or not a function!');
+    }
   };
-  
-  
 
   return (
     <div className="signup-container">
       <div className="signup-box">
-    
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
           alt="Facebook Logo"
@@ -62,8 +61,7 @@ const SignUp = ({ setIsSignUp }) => {
         <button onClick={handleSignUp}>Sign Up</button>
         <div className="login-link">
           <p>Already have an account?</p>
-          <button onClick={() => setIsSignUp(false)}>Log In</button>
-        </div>
+          <button onClick={() => setIsSignUp(false)}>Log In</button>        </div>
       </div>
     </div>
   );

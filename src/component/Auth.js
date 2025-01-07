@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../redux/authSlice';
-import { useNavigate } from 'react-router-dom'; // Correct import for navigation
-import './Auth.css';
+import { useNavigate } from 'react-router-dom';
+import './css/Auth.css';
 
 const Auth = ({ setIsSignUp }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // Create navigate instance here (useNavigate instead of history)
+  const navigate = useNavigate(); 
 
   const handleLogin = () => {
     const existingUser = localStorage.getItem('user');
@@ -17,8 +17,8 @@ const Auth = ({ setIsSignUp }) => {
     if (existingUser) {
       const user = JSON.parse(existingUser);
   
-      console.log('Retrieved user from localStorage:', user);  // Check what is in localStorage
-      console.log('Entered email and password:', email.trim(), password.trim());  // Check entered values
+      console.log('Retrieved user from localStorage:', user); 
+      console.log('Entered email and password:', email.trim(), password.trim());  
   
       if (user.email === email.trim() && user.password === password.trim()) {
         dispatch(login({ email, name: user.name }));

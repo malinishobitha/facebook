@@ -1,0 +1,120 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff; 
+  color: #333;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); 
+}
+
+.auth-box {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.facebook-logo {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.auth-box h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.auth-box input[type="email"],
+.auth-box input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-box input[type="email"]:focus,
+.auth-box input[type="password"]:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+  outline: none;
+}
+
+/* Login Button */
+.auth-box button {
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-box button:hover {
+  background-color: #2575fc;
+  transform: translateY(-2px);
+}
+
+/* Error Message */
+.error-message {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Forgotten Password Link */
+.auth-box p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 15px 0;
+}
+
+.auth-box p:hover {
+  color: #2575fc;
+  cursor: pointer;
+}
+
+/* Sign Up Link */
+.signup-link {
+  margin-top: 20px;
+}
+
+.signup-link p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.signup-link button {
+  background-color: transparent;
+  color: #2575fc;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.signup-link button:hover {
+  color: #6a11cb;
+}
