@@ -16,7 +16,6 @@ const Feed = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
 
-  // Load initial sample posts into Redux state if empty
   useEffect(() => {
     const samplePosts = [
       {
@@ -64,7 +63,6 @@ const Feed = () => {
     }
   }, [dispatch, posts.length]);
 
-  // Update localStorage whenever posts change
   useEffect(() => {
     localStorage.setItem("posts", JSON.stringify(posts));
   }, [posts]);
@@ -75,12 +73,12 @@ const Feed = () => {
       return;
     }
 
-    // Get the username from localStorage
+ 
     const user = JSON.parse(localStorage.getItem("user"));
-    const username = user ? user.name : "Guest"; // Default to "Guest" if no username
+    const username = user ? user.name : "Guest"; 
 
     const newPostData = {
-      username, // Add username here
+      username,
       text: newPost,
       likes: 0,
       dislikes: 0,
@@ -88,10 +86,8 @@ const Feed = () => {
       comments: [],
     };
 
-    // Add new post to Redux state
     dispatch(addPost(newPostData));
 
-    // Also add it to localStorage directly for persistence
     const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
     storedPosts.push(newPostData);
     localStorage.setItem("posts", JSON.stringify(storedPosts));
@@ -132,7 +128,7 @@ const Feed = () => {
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
-        setImage(reader.result); // Base64 encoded image
+        setImage(reader.result); 
       };
       reader.readAsDataURL(file);
     }
@@ -188,7 +184,7 @@ const Feed = () => {
 
         {posts.map((post, index) => (
           <div key={index} className="post">
-            <p><strong>{post.username}</strong></p> {/* Display the username */}
+            <p><strong>{post.username}</strong></p> 
             <p>
               <strong>{post.text}</strong>
             </p>
